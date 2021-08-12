@@ -1,22 +1,18 @@
 ﻿Feature: Skills
 	
 @mytag
-Scenario: Add Seller's skills
+Scenario:1 Add Seller's skills
 	Given  Seller has clicked on  Skills tab
-	And Seller has clicked on Add New
-	And  Seller has added  name of the Skill
-	And Seller has chosen Skill level
-	When seller clicks on Add button
+	And Seller has clicked on skill Add New
+	When seller clicks on skill Add button
 	Then Seller's Skills must be saved and visible
 
-	Scenario: Edit Skills Added by Seller
-	Given  Seller has clicked on  Skills tab
-	And Seller has clicked on Edit
-	And  Seller has edit  name of the Skills or chosen Skill level
-	When seller clicks on Update button
-	Then Seller's Skill must be saved and visible
+	Scenario:2 Edit Skills Added by Seller
+	Given   Seller has clicked on skill Edit
+	When seller clicks on skill Update button
+	Then Seller's  updted Skill must be saved and visible
 
-	Scenario: Delete Skill Added by Seller
+	Scenario:3 Delete Skill Added by Seller
 	Given Seller has clicked on  Skills tab
-	When seller clicks on Delete button
+	When seller clicks on skill Delete button
 	Then Seller's Skill must be Deleted 

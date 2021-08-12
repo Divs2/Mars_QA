@@ -149,22 +149,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Feature\AvailabiltySteps.cs" />
-    <Compile Include="Feature\AvailableHoursSteps.cs" />
-    <Compile Include="Feature\CertificationSteps.cs" />
-    <Compile Include="Feature\DescriptionSteps.cs" />
-    <Compile Include="Feature\EarnTargetSteps.cs" />
-    <Compile Include="Feature\EducationSteps.cs" />
-    <Compile Include="Feature\LanguagesSteps.cs" />
+    <Compile Include="Steps\AvailabiltySteps.cs" />
+    <Compile Include="Steps\AvailableHoursSteps.cs" />
+    <Compile Include="Steps\CertificationSteps.cs" />
+    <Compile Include="Steps\DescriptionSteps.cs" />
+    <Compile Include="Steps\EarnTargetSteps.cs" />
+    <Compile Include="Steps\EducationSteps.cs" />
+    <Compile Include="Steps\LanguagesSteps.cs" />
     <Compile Include="Feature\Login.cs" />
-    <Compile Include="Feature\ShareSkillsSteps.cs" />
-    <Compile Include="Feature\SkillsSteps.cs" />
+    <Compile Include="Steps\SkillsSteps.cs" />
     <Compile Include="SpecflowPages\Helpers\CommonMethods.cs" />
     <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
     <Compile Include="SpecflowPages\Helpers\Driver.cs" />
     <Compile Include="SpecflowPages\Helpers\ExcelLibHelper.cs" />
+    <Compile Include="SpecflowPages\Pages\Education.cs" />
     <Compile Include="SpecflowPages\Pages\Languages.cs" />
     <Compile Include="SpecflowPages\Pages\SignIn.cs" />
+    <Compile Include="SpecflowPages\Pages\Skills.cs" />
     <Compile Include="SpecflowPages\Utils\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,7 +179,6 @@
     <None Include="Feature\Education.feature" />
     <None Include="Feature\Languages.feature" />
     <None Include="Feature\Login.feature" />
-    <None Include="Feature\ShareSkills.feature" />
     <None Include="Feature\Skills.feature" />
     <None Include="SpecflowTests\Data\Data.xlsx" />
     <None Include="packages.config" />
