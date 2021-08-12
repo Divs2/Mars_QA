@@ -47,12 +47,15 @@ namespace MarsQA_1.SpecflowPages.Pages
             Driver.TurnOnWait();
             IWebElement addedu = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
             addedu.Click();
+        }
+        public static void validateaddedu()
+        {
             Driver.TurnOnWait();
             IWebElement actualedu = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[2]"));
             Assert.That(actualedu.Text == "K.S", "actual colledge and expected colledge did not match");
 
-
         }
+
         public static void EditEducation()
         {
             Driver.TurnOnWait();
@@ -85,6 +88,9 @@ namespace MarsQA_1.SpecflowPages.Pages
             eyear.Click();
             IWebElement updbtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td/div[3]/input[1]"));
             updbtn.Click();
+        }
+        public static void validateeditedu()
+        {
             Driver.TurnOnWait();
             IWebElement updedu = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[2]"));
             Assert.That(updedu.Text == "B.K", "actual colledge and expected colledge did not match");
@@ -98,11 +104,16 @@ namespace MarsQA_1.SpecflowPages.Pages
             edubtn.Click();
             IWebElement deletebtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[6]/span[2]/i"));
             deletebtn.Click();
+
+        }
+        public static void validatedeleteedu()
+        {
             Driver.TurnOnWait();
             List<IWebElement> elementList = new List<IWebElement>();
             elementList.AddRange(Driver.driver.FindElements(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td[2]")));
             Assert.That(elementList.Count > 0, "Test fail");
-
         }
+
+        
     }
 }

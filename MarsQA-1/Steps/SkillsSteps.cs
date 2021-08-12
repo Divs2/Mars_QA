@@ -46,19 +46,19 @@ namespace MarsQA_1.Feature
         [Then(@"Seller's Skills must be saved and visible")]
         public void ThenSellerSSkillsMustBeSavedAndVisible()
         {
-              
+            Skills.validateaddskill();
         }
         
         [Then(@"Seller's  updted Skill must be saved and visible")]
         public void ThenSellerSUpdtedSkillMustBeSavedAndVisible()
         {
-              
+            Skills.validateeditskill();
         }
         
         [Then(@"Seller's Skill must be Deleted")]
         public void ThenSellerSSkillMustBeDeleted()
         {
-              
+            Skills.validatedeleteskill();
         }
     }
 }

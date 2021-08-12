@@ -28,10 +28,14 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement skilllevel = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select"));
             skilllevel.Click();
 
-           IWebElement skilllevelnm = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select/option[3]"));
+            IWebElement skilllevelnm = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select/option[3]"));
             skilllevelnm.Click();
             IWebElement addbtns = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
             addbtns.Click();
+
+        }
+        public static void validateaddskill()
+        { 
             Driver.TurnOnWait();
             IWebElement actualskill = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[1]"));
             Assert.That(actualskill.Text == "Drawing", "actual Skill and expected Skill did not match");
@@ -56,6 +60,10 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement updbtns = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/span/input[1]"));
             updbtns.Click();
 
+        }
+        public static void validateeditskill()
+        { 
+
             Driver.driver.Navigate().Refresh();
             IWebElement CreateSills = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
 
@@ -76,6 +84,9 @@ namespace MarsQA_1.SpecflowPages.Pages
             CreateSkills.Click();
             IWebElement deleteskill = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
             deleteskill.Click();
+        }
+        public static void validatedeleteskill()
+        { 
             Driver.TurnOnWait();
             List<IWebElement> elementList = new List<IWebElement>();
             elementList.AddRange(Driver.driver.FindElements(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[1]")));

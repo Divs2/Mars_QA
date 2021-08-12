@@ -47,19 +47,19 @@ namespace MarsQA_1.Feature
         [Then(@"Seller's  education must be saved and visible")]
         public void ThenSellerSEducationMustBeSavedAndVisible()
         {
-             
+            Education.validateaddedu();
         }
         
         [Then(@"Seller's  Updated education must be saved and visible")]
         public void ThenSellerSUpdatedEducationMustBeSavedAndVisible()
         {
-             
+            Education.validateeditedu();
         }
-        
+      
         [Then(@"Seller's  education must be deleted")]
         public void ThenSellerSEducationMustBeDeleted()
         {
-             
+            Education.validatedeleteedu();
         }
     }
 }

@@ -46,13 +46,13 @@ namespace MarsQA_1.Feature
         [Then(@"Seller's  Updated language must be saved and visible")]
         public void ThenSellerSUpdatedLanguageMustBeSavedAndVisible()
         {
-           
+            Languages.Validateeditlanguage();
         }
         
         [Then(@"Seller's languages must be Deleted")]
         public void ThenSellerSLanguagesMustBeDeleted()
         {
-            
+            Languages.ValidateDelete();
         }
     }
 }

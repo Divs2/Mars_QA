@@ -123,11 +123,14 @@ namespace MarsQA_1.Pages
 
             IWebElement updbtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/span/input[1]"));
             updbtn.Click();
+        }
+            public static void Validateeditlanguage() {
+                //Validating Edit Language
 
-            Driver.driver.Navigate().Refresh();
-            IWebElement uptlang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
-            Assert.That(uptlang.Text == "Chinese", "actual languge and expected languge did not match");
-
+                Driver.driver.Navigate().Refresh();
+                IWebElement uptlang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
+                Assert.That(uptlang.Text == "Chinese", "actual languge and expected languge did not match");
+            
         }
 
         public static void Deletelanguges()
@@ -136,7 +139,12 @@ namespace MarsQA_1.Pages
             createlanguges.Click();
             IWebElement deletebtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]"));
             deletebtn.Click();
-            IWebElement lang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
+        }
+        public static void ValidateDelete()
+        { 
+
+            //Validating Delete language
+           IWebElement lang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
             Assert.That(lang.Text != "English", "languge fail to delete");
         }
 
