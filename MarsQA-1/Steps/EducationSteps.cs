@@ -1,4 +1,5 @@
-﻿using MarsQA_1.SpecflowPages.Pages;
+﻿using MarsQA_1.Helpers;
+using MarsQA_1.SpecflowPages.Pages;
 using System;
 using TechTalk.SpecFlow;
 
@@ -10,7 +11,7 @@ namespace MarsQA_1.Feature
         [Given(@"Seller has clicked on  Education tab")]
         public void GivenSellerHasClickedOnEducationTab()
         {
-            
+            ExcelLibHelper.PopulateInCollection(@"C:\Users\Jigar\Desktop\MVP\onboarding.specflow-master\MarsQA-1\SpecflowTests\Data\Data.xlsx", "Education");
         }
         
         [Given(@"Seller has clicked on Add New on Education")]

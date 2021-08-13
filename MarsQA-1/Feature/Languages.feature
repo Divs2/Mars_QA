@@ -6,6 +6,7 @@ Scenario:1 Add languages known by Seller
 	Given  Seller has clicked on  languges tab
 	When seller clicks on Add button
 	Then Seller's languages must be saved and visible
+
 	
 	
 	Scenario:2 Edit languages Added by Seller

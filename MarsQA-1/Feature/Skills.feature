@@ -8,7 +8,8 @@ Scenario:1 Add Seller's skills
 	Then Seller's Skills must be saved and visible
 
 	Scenario:2 Edit Skills Added by Seller
-	Given   Seller has clicked on skill Edit
+	Given  Seller has clicked on  Skills tab
+	And   Seller has clicked on skill Edit
 	When seller clicks on skill Update button
 	Then Seller's  updted Skill must be saved and visible
 

@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using OpenQA.Selenium.Support.UI;
+
 
 namespace MarsQA_1.Pages
 
 {
     public class Languages
     {
+
+       
+
         public static void AddLanguges()
         {
-
-            //Add Languge
+                        //Add Languge
             //Click languges
 
             IWebElement createlanguges = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]"));
@@ -29,15 +33,17 @@ namespace MarsQA_1.Pages
 
             //Add languges
             IWebElement addlanguge = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-            addlanguge.SendKeys("English");
+            addlanguge.SendKeys(ExcelLibHelper.ReadData(2, "Language"));
 
 
             //Add languge level
-            IWebElement langugelevel = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
-            langugelevel.Click();
-
-            IWebElement basicl = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
-            basicl.Click();
+            var langugelevel = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
+            
+         
+            var Ll = new SelectElement(langugelevel);
+            Ll.SelectByValue(ExcelLibHelper.ReadData(2, "Level"));
+           
+            
 
             //add and save languges
             IWebElement savelang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
@@ -54,14 +60,14 @@ namespace MarsQA_1.Pages
 
 
             IWebElement addlanguge1 = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-            addlanguge1.SendKeys("Gujarati");
+            addlanguge1.SendKeys(ExcelLibHelper.ReadData(3, "Language")); 
 
 
             IWebElement langugelevel1 = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
-            langugelevel1.Click();
+            var L2 = new SelectElement(langugelevel1);
+            L2.SelectByValue(ExcelLibHelper.ReadData(3, "Level"));
 
-            IWebElement basicl1 = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
-            basicl1.Click();
+
 
 
             IWebElement savelang1 = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
@@ -73,15 +79,17 @@ namespace MarsQA_1.Pages
 
 
             IWebElement addlangug = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-            addlangug.SendKeys("Hindi");
+            addlangug.SendKeys(ExcelLibHelper.ReadData(4, "Language"));
+           
+
+
 
 
             IWebElement langugeleve = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
-            langugeleve.Click();
+            
 
-            IWebElement basic = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
-            basic.Click();
-
+            var L3 = new SelectElement(langugeleve);
+            L3.SelectByValue(ExcelLibHelper.ReadData(4, "Level"));
 
             IWebElement savelan = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
             savelan.Click();
@@ -92,14 +100,13 @@ namespace MarsQA_1.Pages
 
 
             IWebElement addlangu = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input"));
-            addlangu.SendKeys("Panjabi");
+            addlangu.SendKeys(ExcelLibHelper.ReadData(5, "Language"));
 
 
             IWebElement langugele = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
-            langugele.Click();
+            var L4 = new SelectElement(langugele);
+            L4.SelectByValue(ExcelLibHelper.ReadData(5, "Level"));
 
-            IWebElement basi = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
-            basi.Click();
 
 
             IWebElement savela = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
@@ -119,7 +126,7 @@ namespace MarsQA_1.Pages
 
             IWebElement elanguage = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/div[1]/input"));
             elanguage.Clear();
-            elanguage.SendKeys("Chinese");
+            elanguage.SendKeys(ExcelLibHelper.ReadData(8, "Language"));
 
             IWebElement updbtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td/div/span/input[1]"));
             updbtn.Click();
@@ -128,6 +135,7 @@ namespace MarsQA_1.Pages
                 //Validating Edit Language
 
                 Driver.driver.Navigate().Refresh();
+                Driver.TurnOnWait();
                 IWebElement uptlang = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
                 Assert.That(uptlang.Text == "Chinese", "actual languge and expected languge did not match");
             

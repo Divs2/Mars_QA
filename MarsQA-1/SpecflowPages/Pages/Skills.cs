@@ -1,6 +1,7 @@
 ﻿using MarsQA_1.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,16 +23,15 @@ namespace MarsQA_1.SpecflowPages.Pages
 
             Driver.TurnOnWait();
             IWebElement skillname = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[1]/input"));
-            skillname.SendKeys("Drawing");
+            skillname.SendKeys(ExcelLibHelper.ReadData(2, "Skills")); 
 
             Driver.TurnOnWait();
-            IWebElement skilllevel = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select"));
-            skilllevel.Click();
-
-            IWebElement skilllevelnm = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select/option[3]"));
-            skilllevelnm.Click();
-            IWebElement addbtns = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
-            addbtns.Click();
+            IWebElement skilllevel = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/div[2]/select")); 
+           
+            var s1 = new SelectElement(skilllevel);
+            s1.SelectByValue(ExcelLibHelper.ReadData(2, "Levels"));
+            IWebElement saveskill = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
+            saveskill.Click();
 
         }
         //Validate Add Skils
@@ -54,7 +54,7 @@ namespace MarsQA_1.SpecflowPages.Pages
 
             IWebElement eskill = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
             eskill.Clear();
-            eskill.SendKeys("Painting");
+            eskill.SendKeys(ExcelLibHelper.ReadData(5, "Skills"));
 
             Driver.TurnOnWait();
 
@@ -74,7 +74,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             Driver.TurnOnWait();
            IWebElement upskillnm = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[1]"));
           
-            Assert.That(upskillnm.Text == "Painting","actual colledge and expected colledge did not match");
+            Assert.That(upskillnm.Text == "Painting", "actual colledge and expected colledge did not match");
 
 
         }
