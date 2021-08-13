@@ -34,6 +34,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             addbtns.Click();
 
         }
+        //Validate Add Skils
         public static void validateaddskill()
         { 
             Driver.TurnOnWait();
@@ -61,6 +62,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             updbtns.Click();
 
         }
+        //Validate Edit Skills
         public static void validateeditskill()
         { 
 
@@ -85,6 +87,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement deleteskill = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
             deleteskill.Click();
         }
+        //Validate Delete Skill
         public static void validatedeleteskill()
         { 
             Driver.TurnOnWait();

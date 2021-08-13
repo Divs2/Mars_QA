@@ -48,6 +48,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement addedu = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
             addedu.Click();
         }
+        //Validating Add languges
         public static void validateaddedu()
         {
             Driver.TurnOnWait();
@@ -89,6 +90,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             IWebElement updbtn = Driver.driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody/tr/td/div[3]/input[1]"));
             updbtn.Click();
         }
+        //Validate edit Languge
         public static void validateeditedu()
         {
             Driver.TurnOnWait();
@@ -106,6 +108,7 @@ namespace MarsQA_1.SpecflowPages.Pages
             deletebtn.Click();
 
         }
+        //Validate delete language
         public static void validatedeleteedu()
         {
             Driver.TurnOnWait();
